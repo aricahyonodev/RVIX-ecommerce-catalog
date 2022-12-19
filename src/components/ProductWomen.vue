@@ -12,10 +12,10 @@
                 <div class="flex product_subtitle ">
                     <p>{{ data.category }}</p>
                     <div>{{ data.rating.rate }}/5
-                    <span v-for="n in Math.ceil(data.rating.rate)">
+                    <span :v-for="n in Math.ceil(data.rating.rate)">
                         <div class="rounded-solid-rate"></div>
                      </span>
-                    <span v-for="n in 5 - Math.ceil(data.rating.rate) ">
+                    <span :v-for="n in 5 - Math.ceil(data.rating.rate) ">
                         <div class="rounded-rate"></div>
                      </span>
                     </div>
