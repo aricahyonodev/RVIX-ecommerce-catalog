@@ -12,10 +12,10 @@
                 <div class="flex product_subtitle ">
                     <p>{{ data.category }}</p>
                     <div>{{ data.rating.rate }}/5
-                    <span :v-for="n in Math.ceil(data.rating.rate)">
+                    <span v-for="n in Math.ceil(data.rating.rate)" v-bind:key="'rounded-solid' + n">
                         <div class="rounded-solid-rate"></div>
                      </span>
-                    <span :v-for="n in 5 - Math.ceil(data.rating.rate) ">
+                    <span v-for="i in 5 - Math.ceil(data.rating.rate)" v-bind:key="'rounded' + i">
                         <div class="rounded-rate"></div>
                      </span>
                     </div>
@@ -150,7 +150,7 @@ button{
     display: flex;
     border: 8px solid #f3f3f3;
     /* Light grey */
-    border-top: 8px solid #3498db;
+    border-top: 8px solid #002772;
     /* Blue */
     border-radius: 50%;
     width: 50px;
